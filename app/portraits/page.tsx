@@ -1,5 +1,6 @@
 import fs from 'fs';
 import Image from '../components/Image';
+import NavBar from '../components/NavBar';
 
 const filePaths: string[] = [];
 fs.readdir('./public/portraits', (err, files) => {
@@ -10,8 +11,9 @@ fs.readdir('./public/portraits', (err, files) => {
 
 export default function Portraits() {
   return (
-    <div className='bg-neutral-200'>
-      <main>
+    <div className='bg-neutral-100'>
+      <NavBar isSticky={true} backgroundColor={'bg-neutral-100'}/>
+      <main className="mt-40">
         <div className='w-full columns-1 md:columns-2 lg:columns-3 xl:columns-4 gap-6 p-4'>
           {filePaths.map((filePath, index) =>
             <Image key={index} filePath={filePath}/>
