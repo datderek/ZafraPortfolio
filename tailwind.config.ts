@@ -16,10 +16,15 @@ const config: Config = {
         fadeIn: {
           '0%': { opacity: '0' },
           '100%': { opacity: '1'}
+        },
+        slideUp: {
+          '0%': { transform: 'translateY(25%)'},
+          '100%': { transform: 'translateY(0)'}
         }
       },
       animation: {
         dropAndFadeIn: 'dropIn 250ms, fadeIn 250ms linear',
+        slideUpAndFadeIn: 'slideUp 750ms, fadeIn 750ms linear'
       }
     },
   },
