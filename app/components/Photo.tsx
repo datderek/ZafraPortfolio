@@ -1,11 +1,12 @@
 'use client'
 import { useEffect, useRef, useState } from 'react';
+import Image from 'next/image'
 
 interface ImageProps {
   filePath: string;
 }
 
-export default function Image({filePath}: ImageProps) {
+export default function Picture({filePath}: ImageProps) {
     const ref = useRef<HTMLImageElement>(null);
     const [isVisible, setVisible] = useState<boolean>(false);
   
@@ -23,7 +24,7 @@ export default function Image({filePath}: ImageProps) {
     }, []);
   
     return (
-      <img ref={ref} src={filePath} className={`w-full mb-4 ${isVisible ? "animate-slideUpAndFadeIn": ""}`}/>
-    )
+      <Image ref={ref} src={filePath} alt={`File ${filePath}`} width={0} height={0} className={`w-full mb-4 ${isVisible ? "animate-slideUpAndFadeIn": ""}`}/>
+    );
   }
   

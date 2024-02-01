@@ -1,5 +1,5 @@
 import fs from 'fs';
-import Image from '../components/Image';
+import Photo from '../components/Photo';
 import NavBar from '../components/NavBar';
 
 const filePaths: string[] = [];
@@ -16,7 +16,7 @@ export default function Portraits() {
       <main className="mt-40">
         <div className='w-full columns-1 md:columns-2 lg:columns-3 xl:columns-4 gap-6 p-4'>
           {filePaths.map((filePath, index) =>
-            <Image key={index} filePath={filePath}/>
+            <Photo key={index} filePath={filePath}/>
           )}
         </div>
       </main>
