@@ -27,7 +27,7 @@ export default function NavBar({isSticky, backgroundColor}: NavBarProps) {
 
 
   return (
-    <nav className={`flex justify-between items-center fixed top-0 left-0 w-full h-16 ${isAtTop ? "px-10 py-20" : "px-10 py-8"} gap-4 text-black ${backgroundColor} transition-all duration-300`}>
+    <nav className={`flex justify-between items-center fixed top-0 left-0 w-screen h-16 z-50 ${isAtTop ? "px-10 py-20" : "px-10 py-8"} gap-4 text-black ${backgroundColor} transition-all duration-300`}>
       <Link href="/"><Image src='/zafraportfolio/logo.svg' alt='Derrick Zafra Logo' width={0} height={0} className={`w-auto h-14 md:h-16 ${isSticky ? "" : "animate-dropAndFadeIn"}`}/></Link>
       <button className={`md:hidden shrink-0 h-6 ${isSticky ? "" : "animate-dropAndFadeIn"}`}>
         <Image src='/zafraportfolio/menu.svg' alt='Menu icon' width={0} height={0} className={`w-auto h-full md:hidden shrink-0 ${isSticky ? "" : "animate-dropAndFadeIn"}`}/>
